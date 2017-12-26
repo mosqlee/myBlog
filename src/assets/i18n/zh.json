@@ -1,0 +1,13 @@
+{
+    "homeNav":[
+            { "route": "blog", "name": "我的博客"
+            },
+            { "route": "camera", "name": "随便拍拍"
+            },
+            { "route": "dog", "name": "dog food"
+            },
+            { "route": "about", "name": "关于我"
+            }
+    ],
+    "post":"海报"
+}
