@@ -1,3 +1,4 @@
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 import { HomeComponent } from './home/home.component';
 import { CameraComponent } from './camera/camera.component';
@@ -13,6 +14,7 @@ export const homeRoute = [
             { path: 'blog', component: BlogComponent },
             { path: 'camera', component: CameraComponent },
             { path: 'about', component: AboutComponent },
+            { path : 'blogDetail/:id', component: BlogDetailComponent},
             {
                 path: 'dog',
                 loadChildren: './dog/dog.module#DogModule'

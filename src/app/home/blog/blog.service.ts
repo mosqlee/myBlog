@@ -5,14 +5,14 @@ import 'rxjs/add/operator/toPromise';
 import { Blog } from '../../blog';
 @Injectable()
 export class BlogService {
-    private blogUrl = 'api/blogs';
+    private blogUrl = 'mock-data/mock.json';
     constructor(public http: Http) {
 
     }
     getBlogs(): Promise<Blog[]> {
         return this.http.get(this.blogUrl)
             .toPromise()
-            .then(response => response.json() as Blog[])
+            .then(response => response.json().blogs as Blog[])
             .catch(this.handleError);
     }
     private handleError(error: any): Promise<any> {

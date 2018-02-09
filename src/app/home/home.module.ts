@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +18,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
     NgZorroAntdModule.forRoot(),
     TranslateModule
   ],
-  declarations: [HomeComponent, AboutComponent, BlogComponent, CameraComponent],
+  declarations: [HomeComponent, AboutComponent, BlogComponent, CameraComponent, BlogDetailComponent],
   providers: [
     BlogService
   ],

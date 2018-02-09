@@ -10,12 +10,15 @@ import { Component, OnInit } from '@angular/core';
   animations: [fadeIn]
 })
 export class BlogComponent implements OnInit {
-  blogs: Blog[];
+  blogs: Blog[] = [];
+  _dataSet = [];
   constructor(private blogService: BlogService) { }
 
   ngOnInit() {
     this.blogService.getBlogs()
-      .then(blogs => this.blogs = blogs);
+      .then((blogs) => {
+        this.blogs = blogs;
+      });
   }
 
 }
