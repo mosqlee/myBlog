@@ -1,3 +1,6 @@
+import { FormsModule } from '@angular/forms';
+import { BlogModel } from './blog-detail/blog.model';
+import { GetBlogDetailService } from './blog-detail/get-blog-detail.service';
 import { BlogService } from './blog/blog.service';
 import { homeRoute } from './home.route';
 import { AboutComponent } from './about/about.component';
@@ -16,11 +19,14 @@ import { BlogDetailComponent } from './blog-detail/blog-detail.component';
     CommonModule,
     RouterModule.forChild(homeRoute),
     NgZorroAntdModule.forRoot(),
-    TranslateModule
+    TranslateModule,
+    FormsModule
   ],
   declarations: [HomeComponent, AboutComponent, BlogComponent, CameraComponent, BlogDetailComponent],
   providers: [
-    BlogService
+    BlogService,
+    GetBlogDetailService,
+    BlogModel
   ],
 })
 export class HomeModule { }

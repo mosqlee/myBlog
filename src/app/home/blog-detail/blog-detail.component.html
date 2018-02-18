@@ -1,3 +1,6 @@
-<p>
-  blog-detail works!
-</p>
+<h2>{{blog.title}}</h2>
+<p [innerHtml]="blog.content"></p>
+<nz-rate [ngModel]="blog.star"></nz-rate>
+  <button nz-button [nzType]="'primary'">
+    <span>评价</span>
+  </button>
